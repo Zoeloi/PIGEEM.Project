@@ -24,7 +24,7 @@ class MainApp(ctk.CTk):
         self.create_menu_buttons()
         
     def create_menu_buttons(self):
-        # Lista de opciones del menú (igual que en tu imagen)
+        # Lista de opciones del menu
         menu_options = [
             "FINANZAS Y CONTABILIDAD",
             "INVENTARIO Y PEDIDOS",
