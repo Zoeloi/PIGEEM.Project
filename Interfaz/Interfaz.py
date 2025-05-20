@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from Finanzas.finanzas import FinanzasFrame
 
 class MainApp(ctk.CTk):
     def __init__(self):
@@ -6,7 +7,7 @@ class MainApp(ctk.CTk):
         
         # Configuración básica de la ventana
         self.title("PIGEEM - Sistema de Gestión")
-        self.geometry("800x600")
+        self.attributes ("-zoomed")
         ctk.set_appearance_mode("dark")  # Modo oscuro
         ctk.set_default_color_theme("blue")  # Tema azul
         
@@ -33,6 +34,7 @@ class MainApp(ctk.CTk):
             "SALIR"
         ]
         
+
         # Crear un frame para contener los botones
         button_frame = ctk.CTkFrame(self)
         button_frame.pack(pady=20, padx=100, fill="both", expand=True)
@@ -51,7 +53,9 @@ class MainApp(ctk.CTk):
     def menu_action(self, option):
         # Acciones al hacer clic en cada botón
         if option == "FINANZAS Y CONTABILIDAD":
-            print("Abriendo módulo de Finanzas...")
+            FinanzasFrame(self)
+        elif option == "INVENTARIO Y PEDIDOS":
+            print("Abriendo módulo de Inventario...")
             # Aquí iría el código para abrir tu módulo
         elif option == "INVENTARIO Y PEDIDOS":
             print("Abriendo módulo de Inventario...")
