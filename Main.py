@@ -1,4 +1,4 @@
-from Interfaz import MainApp
+from Interfaz.Interfaz import MainApp
 
 if __name__ == "__main__":
     app = MainApp()
